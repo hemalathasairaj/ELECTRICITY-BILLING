@@ -24,11 +24,11 @@ public class Bill {
 	@Column
 	private String connection;
 	private String readingdate;
-	private LocalDate duedate;
+	private String duedate;
 	private int unitsused;
 	private int amount;
 
-	public Bill(int billno, String readingdate, LocalDate duedate, int unitsused, int amount, Customer customer,
+	public Bill(int billno, String readingdate, String duedate, int unitsused, int amount, Customer customer,
 			String connection) {
 		super();
 		this.billno = billno;
@@ -78,17 +78,17 @@ public class Bill {
 	}
 	/**
 	 * 
-	 * @return localdate returns localdate which is duedate
+	 * @return String returns String which is duedate
 	 */
 
-	public LocalDate getDuedate() {
+	public String getDuedate() {
 		return duedate;
 	}
 	/**
 	 * 
 	 * @param duedate accepts bill duedate
 	 */
-	public void setDuedate(LocalDate duedate) {
+	public void setDuedate(String duedate) {
 		this.duedate = duedate;
 	}
 	/**
